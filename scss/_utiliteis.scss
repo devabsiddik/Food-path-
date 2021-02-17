@@ -1,0 +1,191 @@
+$main-font-color-dark: #252525;
+$secondary-font-color: #c59d5f;
+$body-font-color: #515151;
+
+
+//important thing stleing
+
+//scrool top navbar styleing 
+.nav_active {
+    background: #fdcb6e;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+//preloader
+#preloader{
+    background: url("https://www.rclifestyle.co.uk/wp-content/uploads/animated-gif-loader-2.gif") no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+    position: fixed;
+}
+
+//scroll to top
+#scrolltp{
+    cursor: pointer;
+position: relative;
+left: 92%;
+    color: #1e272e;
+    padding: 1.5rem 2.7rem;
+font-size: 1rem;
+    background: #fff;
+  width: 10%;
+flex-direction: column;
+  display: flex;
+  border-radius: 50%;
+justify-content: center;
+align-items: center;
+font-size: 20px;
+}
+
+/* container */
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 3rem;
+}
+
+p{
+    margin-bottom: 1rem;
+}
+
+//section
+section{
+    margin: 4rem 0;
+    padding: 1rem 0;
+}
+//grid
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+justify-content: center;
+align-items: center;
+overflow: hidden !important;
+}
+
+
+/* btn */
+
+.btn{
+    padding: .5rem 1.6rem;
+    color: #333;
+    background: whitesmoke;
+    display: inline-block;
+    text-align: center;
+ transition: 0.5s;
+    margin: 8px 0 0;
+    &:hover{
+        background: $secondary-font-color;
+    color: whitesmoke;
+    }
+
+}
+
+
+
+.xxl{
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: $secondary-font-color;
+}
+
+.xl{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: -.9rem;
+    color: $body-font-color;
+    letter-spacing: 5px;
+}
+
+.md{
+    font-size: 2.2rem;
+    text-align: center;
+    color: whitesmoke;
+}
+
+//awesomke shapes
+.sm_under{
+    width: 80px;
+    height: 2px;
+    background: $secondary-font-color;
+    position: relative;
+text-align: center;
+margin: 0 auto;
+    &::before,
+    &::after
+    {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        content: '';
+        border: 6px solid transparent;
+    }
+    
+    &::after{
+        border-right-color: $secondary-font-color;
+        right: 0;
+     
+    }
+    &::before{
+        border-left-color: $secondary-font-color;
+       left: 0;
+      
+    }
+    
+}
+.sm{
+    font-size:1.7rem;
+    text-align: center;
+    color: $secondary-font-color;
+    display: inline-block;
+
+
+}
+
+
+.text{
+    &-primary{
+        color: $secondary-font-color;
+    }
+    &-secondary{
+color: whitesmoke;
+    }
+    &-upper{
+        text-transform: uppercase;
+    }
+    &-spacing{
+        letter-spacing: 4px;
+    }
+&-center{
+    text-align: center;
+}
+}
+
+
+//margin and padding
+
+$spaceamounts : (1,2,3,4,5,6,7);
+
+@each $space in $spaceamounts {
+    .m-#{$space}{
+margin: #{$space}rem;
+    }
+    .my-#{$space}{
+margin: #{$space}rem 0;
+    }
+    //padding
+    @each $space in $spaceamounts {
+.p-#{$space}{
+padding: #{$space}rem;
+}
+    }
+    @each $space in $spaceamounts {
+.py-#{$space}{
+padding: #{$space}rem 0;
+}
+    }
+}
